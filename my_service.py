@@ -32,7 +32,6 @@ if __name__ == '__main__':
         servicemanager.PrepareToHostSingle(MyService)
         servicemanager.StartServiceCtrlDispatcher()
     else:
-        # Check if the service should be installed for auto-startup
         if sys.argv[1].lower() == 'install':
             try:
                 win32serviceutil.InstallService(
